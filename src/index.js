@@ -15,6 +15,7 @@ refs.loadMoreBtn.addEventListener('click', onLoadMore)
 function onSearch(event) {
     event.preventDefault();
 
+    clearImageContainer()
     apiServices.query = event.currentTarget.elements.query.value;
     apiServices.resetPage();
 
@@ -29,5 +30,8 @@ function appendImagesMarkUp(images) {
     refs.imageContainer.insertAdjacentHTML('beforeend', imageCardTpl(images))
 }
 
+function clearImageContainer() {
+    refs.imageContainer.innerHTML = '';
+}
 
       
