@@ -22,8 +22,6 @@ body {
   flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
-  justify-items: center;
-  justify-content: center;
 }
 
 .photo-card {
@@ -67,4 +65,9 @@ ul {
   align-items: center;
   justify-items: center;
   justify-content: center;
+}
+
+.load-more {
+  margin-right: auto;
+  margin-left: auto;
 }
