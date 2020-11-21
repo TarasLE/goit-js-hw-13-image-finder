@@ -36,3 +36,7 @@ ul {
 /* img {
   width: inherit;
 } */
+
+.card-image {
+  width: 100%;
+}
