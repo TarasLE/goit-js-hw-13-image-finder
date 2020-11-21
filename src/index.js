@@ -2,7 +2,7 @@ import './css/styles.css';
 
 const option = {
     headers: {
-        Authorization: '19125806-9a56a48a4edb0ea3b4b1e3bdb'
+        // Authorization: '19125806-9a56a48a4edb0ea3b4b1e3bdb'
         }
     }
 
