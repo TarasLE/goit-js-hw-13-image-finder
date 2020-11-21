@@ -13,11 +13,11 @@ export default class ApiService {
     fetch(url, option).then(response => response.json()).then(console.log())
     }
 
-    get searhQuery(){
+    get query(){
     return this.searhQuery;
     }
     
-    set searhQuery(newSerchQuery) {
+    set query(newSerchQuery) {
         this.searhQuery = newSerchQuery;
     }
 }

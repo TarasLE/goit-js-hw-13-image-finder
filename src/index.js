@@ -17,7 +17,7 @@ refs.loadMoreBtn.addEventListener('click', onLoadMore)
 function onSearch(event) {
     event.preventDefault();
 
-    apiServices.searhQuery = event.currentTarget.elements.query.value;
+    apiServices.query = event.currentTarget.elements.query.value;
 
     apiServices.fetchImages(searhQuery);
 }
