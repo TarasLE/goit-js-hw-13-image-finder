@@ -6,7 +6,7 @@ import { refs } from './js/components/refs'
 
 const apiServices = new ApiServices();
 
-let searhQuery = '';
+// let searhQuery = '';
 
 refs.searchForm.addEventListener('submit', onSearch)
 refs.loadMoreBtn.addEventListener('click', onLoadMore)
