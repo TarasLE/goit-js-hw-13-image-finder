@@ -8,7 +8,7 @@ import imageCardTpl from './templates/imageCardTpl.hbs'
 const apiServices = new ApiServices();
 
 // let searhQuery = '';
-
+let scrollSize;
 refs.searchForm.addEventListener('submit', onSearch)
 refs.loadMoreBtn.addEventListener('click', onLoadMore)
 
@@ -20,21 +20,21 @@ async function onSearch(event) {
     apiServices.resetPage();
 
    await apiServices.fetchImages().then(appendImagesMarkUp)
-   console.log(refs.imageContainer.clientHeight);
+   scrollSize = refs.imageContainer.clientHeight;
 }
  
 async function onLoadMore() {
-    const scrollSize = 636 * apiServices.page - 636;
-    console.log(`scrollSize до fetch ${scrollSize}`);
+    const scrollRevers = scrollSize * (apiServices.page - 1);
+    console.log(`scrollSize до fetch ${scrollRevers}`);
     console.log(`apiServices.page до fetch ${ apiServices.page }`);
-    await apiServices.fetchImages().then(appendImagesMarkUp)
-    console.log(`scrollSize после fetch ${ scrollSize }`);
+    await apiServices.fetchImages().then(scrollRevers)
+    console.log(`scrollSize после fetch ${ scrollRevers }`);
     console.log(`apiServices.page после fetch ${ apiServices.page }`); 
         // .then(setTimeout(() => {
         //     window.scrollTo({ top: apiServices.page*window.innerHeight, behaviour: "smooth" })
         // }, 500))
     
-    window.scrollTo({ top: scrollSize, behaviour: "smooth" })
+    window.scrollTo({ top: scrollRevers, behaviour: "smooth" })
     // setTimeout(() => { window.scrollTo({ top: scrollSize, behaviour: "smooth" }) }, 500);
    
     // console.log(636 * apiServices.page);
