@@ -12,15 +12,15 @@ const apiServices = new ApiServices();
 refs.searchForm.addEventListener('submit', onSearch)
 refs.loadMoreBtn.addEventListener('click', onLoadMore)
 
-function onSearch(event) {
+async function onSearch(event) {
     event.preventDefault();
 
     clearImageContainer()
     apiServices.query = event.currentTarget.elements.query.value;
     apiServices.resetPage();
 
-    apiServices.fetchImages().then(appendImagesMarkUp);
-    console.log(refs.imageContainer.clientHeight);
+   await apiServices.fetchImages().then(appendImagesMarkUp).then(console.log(refs.imageContainer.clientHeight));
+    
 }
  
 async function onLoadMore() {
