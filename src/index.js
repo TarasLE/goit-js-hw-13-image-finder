@@ -23,13 +23,13 @@ function onSearch(event) {
 }
  
 function onLoadMore() {
-    apiServices.fetchImages().then(appendImagesMarkUp).then(scrollTo({ top: 636 * apiServices.page, behaviour: "smooth" }));
+    apiServices.fetchImages().then(appendImagesMarkUp);
     // window.scrollTo({
     // bottom: 100,
 
     // behavior: 'smooth'
 // });
-    
+    window.scrollTo({ top: 400 * apiServices.page, behaviour: "smooth" })
     // console.log(636 * apiServices.page);
     // console.log(apiServices.page);
     
