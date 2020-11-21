@@ -25,23 +25,9 @@ async function onSearch(event) {
  
 async function onLoadMore() {
     const scrollRevers = scrollSize * (apiServices.page - 1);
-    console.log(`scrollSize до fetch ${scrollRevers}`);
-    console.log(`apiServices.page до fetch ${ apiServices.page }`);
     await apiServices.fetchImages().then(appendImagesMarkUp)
-    console.log(`scrollSize после fetch ${ scrollRevers }`);
-    console.log(`apiServices.page после fetch ${ apiServices.page }`); 
-        // .then(setTimeout(() => {
-        //     window.scrollTo({ top: apiServices.page*window.innerHeight, behaviour: "smooth" })
-        // }, 500))
-    
     window.scrollTo({ top: scrollRevers, behaviour: "smooth" })
-    // setTimeout(() => { window.scrollTo({ top: scrollSize, behaviour: "smooth" }) }, 500);
-   
-    // console.log(636 * apiServices.page);
-    // console.log(apiServices.page);
-    // console.log(window.innerHeight);
-    // console.log(scrollSize);
-    
+  
 }
 
 function appendImagesMarkUp(images) {

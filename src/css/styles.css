@@ -72,3 +72,11 @@ ul {
   margin-right: auto;
   margin-left: auto;
 }
+
+.btn.is-hidden {
+  display: none;
+}
+
+.btn > .spinner.is-hidden {
+  display: none;
+}
