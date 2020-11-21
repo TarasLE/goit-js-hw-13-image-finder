@@ -29,7 +29,8 @@ function onLoadMore() {
 
     // behavior: 'smooth'
 // });
-  scrollTo({top: window.innerHeight*apiServices.this.page, behaviour: "smooth"})
+    scrollTo({ top: window.innerHeight*apiServices.page, behaviour: "smooth" })
+    
 }
 
 function appendImagesMarkUp(images) {
