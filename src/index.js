@@ -23,27 +23,22 @@ function onSearch(event) {
 }
  
 async function onLoadMore() {
-    
-   await apiServices.fetchImages().then(appendImagesMarkUp)
+    console.log(`scrollSize до fetch ${scrollSize}`);
+    console.log(`apiServices.page до fetch ${ apiServices.page }`);
+    await apiServices.fetchImages().then(appendImagesMarkUp)
+    console.log(`scrollSize после fetch ${ scrollSize }`);
+    console.log(`apiServices.page после fetch ${ apiServices.page }`); 
         // .then(setTimeout(() => {
         //     window.scrollTo({ top: apiServices.page*window.innerHeight, behaviour: "smooth" })
         // }, 500))
-    const scrollSize = ((window.innerHeight * apiServices.page) - 200);
-    console.log(scrollSize);
-    window.scrollTo({ top: scrollSize, behaviour: "smooth" }, 500);
-    // window.scrollTo({
-    // bottom: 100,
-
-    // behavior: 'smooth'
-// });
-    // window.scrollTo({ top: 400 * apiServices.page, behaviour: "smooth" })
+    const scrollSize = window.innerHeight * apiServices.page;
     
-    // window.scrollTo(0, scrollSize)
-    // window.scrollTo({ top: scrollSize , behaviour: "smooth" })
+    window.scrollTo({ top: scrollSize, behaviour: "smooth" }, 500);
+   
     // console.log(636 * apiServices.page);
     // console.log(apiServices.page);
-    console.log(window.innerHeight);
-    console.log(scrollSize);
+    // console.log(window.innerHeight);
+    // console.log(scrollSize);
     
 }
 
