@@ -23,7 +23,7 @@ function onSearch(event) {
 }
  
 async function onLoadMore() {
-    const scrollSize = window.innerHeight * apiServices.page -200;
+    const scrollSize = window.innerHeight * apiServices.page -window.innerHeight;
     console.log(`scrollSize до fetch ${scrollSize}`);
     console.log(`apiServices.page до fetch ${ apiServices.page }`);
     await apiServices.fetchImages().then(appendImagesMarkUp)
