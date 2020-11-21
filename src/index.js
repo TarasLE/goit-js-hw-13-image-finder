@@ -19,7 +19,7 @@ async function onSearch(event) {
     apiServices.query = event.currentTarget.elements.query.value;
     apiServices.resetPage();
 
-   await apiServices.fetchImages().then(appendImagesMarkUp).then(console.log(refs.imageContainer.clientHeight));
+   await apiServices.fetchImages().then(appendImagesMarkUp).then(console.log(refs.searchForm.clientHeight));
     
 }
  
