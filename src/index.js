@@ -1,11 +1,8 @@
 import './css/styles.css';
 import ApiServices from './js/components/apiService'
+import { refs } from './js/components/refs'
 
-const refs = {
-    searchForm: document.querySelector('.search-form'),
-    imageContainer: document.querySelector('.gallery'),
-    loadMoreBtn: document.querySelector('[data-action="load-more"]')
-}
+
 
 const apiServices = new ApiServices();
 
