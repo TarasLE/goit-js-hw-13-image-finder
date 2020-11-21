@@ -29,7 +29,7 @@ function onLoadMore() {
 
     // behavior: 'smooth'
 // });
-    window.scrollBy(0, window.innerHeight)
+    window.scrollBy(0, 500);
 }
 
 function appendImagesMarkUp(images) {
