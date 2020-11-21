@@ -19,8 +19,8 @@ async function onSearch(event) {
     apiServices.query = event.currentTarget.elements.query.value;
     apiServices.resetPage();
 
-   await apiServices.fetchImages().then(appendImagesMarkUp).then(console.log(document.querySelector('.gallery').clientHeight));
-    
+   await apiServices.fetchImages().then(appendImagesMarkUp)
+   console.log(document.querySelector('.gallery').clientHeight);
 }
  
 async function onLoadMore() {
