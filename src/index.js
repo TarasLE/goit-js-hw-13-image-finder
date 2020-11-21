@@ -17,11 +17,11 @@ function onSearch(event) {
     apiServices.query = event.currentTarget.elements.query.value;
     apiServices.resetPage();
 
-    apiServices.fetchImages().then(images => console.log(images));
+    apiServices.fetchImages().then(hits => console.log(hits));
 }
  
 function onLoadMore() {
-    apiServices.fetchImages().then(images => console.log(images));
+    apiServices.fetchImages().then(hits => console.log(hits));
 }
 
 
