@@ -15,10 +15,16 @@ body {
 }
 
 .gallery {
+  width: 1200px;
   display: flex;
 }
 
 .photo-card {
   display: block;
-  width: calc((100% - 30px) / 4);
+  width: 25%;
+  margin: 20px;
+}
+
+ul {
+  list-style: none;
 }
