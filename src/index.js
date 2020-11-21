@@ -29,7 +29,7 @@ function onLoadMore() {
 
     // behavior: 'smooth'
 // });
-    scrollTo({ top: window.innerHeight*apiServices.page, behaviour: "smooth" })
+    scrollTo({ top: 636*apiServices.page, behaviour: "smooth" })
     
 }
 
