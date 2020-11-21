@@ -28,7 +28,8 @@ async function onLoadMore() {
         // .then(setTimeout(() => {
         //     window.scrollTo({ top: apiServices.page*window.innerHeight, behaviour: "smooth" })
         // }, 500))
-    const scrollSize = window.innerHeight * apiServices.page - 200;
+    const scrollSize = ((window.innerHeight * apiServices.page) - 200);
+    console.log(scrollSize);
     window.scrollTo({ top: scrollSize, behaviour: "smooth" }, 500);
     // window.scrollTo({
     // bottom: 100,
