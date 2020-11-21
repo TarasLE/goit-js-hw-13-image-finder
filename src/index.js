@@ -20,6 +20,7 @@ function onSearch(event) {
     apiServices.resetPage();
 
     apiServices.fetchImages().then(appendImagesMarkUp);
+    console.log(refs.imageContainer.clientHeight);
 }
  
 async function onLoadMore() {
