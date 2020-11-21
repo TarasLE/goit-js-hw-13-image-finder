@@ -11,7 +11,11 @@ export default class ApiService {
 
     const url = `https://pixabay.com/api/?image_type=photo&orientation=horizontal&q=${this.searhQuery}&page=${this.page}&per_page=12&key=19125806-9a56a48a4edb0ea3b4b1e3bdb`
   
-        fetch(url, option).then(response => response.json()).then(data => { this.page += 1; });
+        fetch(url, option).then(response => response.json()).then(data => { incrementPage(); });
+    }
+
+    incrementPage() {
+        this.page += 1;
     }
 
     get query(){
