@@ -25,9 +25,6 @@ body {
 
 .photo-card {
   display: flex;
-  /* flex-direction: row; */
-  width: calc((100% -100px) / 4);
-  margin: 10px;
 }
 
 ul {
@@ -52,5 +49,6 @@ ul {
 .card-container {
   display: flex;
   margin: 0;
-  padding: 0;
+  width: calc((100% -100px) / 4);
+  margin: 10px;
 }
