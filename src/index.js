@@ -20,7 +20,7 @@ async function onSearch(event) {
     apiServices.resetPage();
 
    await apiServices.fetchImages().then(appendImagesMarkUp)
-   console.log(document.querySelector('.gallery').clientHeight);
+   console.log(refs.imageContainer.clientHeight);
 }
  
 async function onLoadMore() {
