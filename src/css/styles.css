@@ -21,7 +21,7 @@ body {
 }
 
 .photo-card {
-  display: block;
+  display: flex;
   width: 25%;
   margin: 20px;
 }
