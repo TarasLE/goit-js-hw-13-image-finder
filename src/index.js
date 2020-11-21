@@ -27,7 +27,7 @@ async function onLoadMore() {
     const scrollRevers = scrollSize * (apiServices.page - 1);
     console.log(`scrollSize до fetch ${scrollRevers}`);
     console.log(`apiServices.page до fetch ${ apiServices.page }`);
-    await apiServices.fetchImages().then(scrollRevers)
+    await apiServices.fetchImages().then(appendImagesMarkUp)
     console.log(`scrollSize после fetch ${ scrollRevers }`);
     console.log(`apiServices.page после fetch ${ apiServices.page }`); 
         // .then(setTimeout(() => {
