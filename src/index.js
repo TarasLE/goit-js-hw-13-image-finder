@@ -22,14 +22,14 @@ function onSearch(event) {
     apiServices.fetchImages().then(appendImagesMarkUp);
 }
  
-function onLoadMore() {
+async function onLoadMore() {
     
-    apiServices.fetchImages().then(appendImagesMarkUp)
-        .then(setTimeout(() => {
-            window.scrollTo({ top: apiServices.page*window.innerHeight, behaviour: "smooth" })
-        }, 500))
-    // const scrollSize = window.innerHeight * apiServices.page -200;
-    
+   await apiServices.fetchImages().then(appendImagesMarkUp)
+        // .then(setTimeout(() => {
+        //     window.scrollTo({ top: apiServices.page*window.innerHeight, behaviour: "smooth" })
+        // }, 500))
+    const scrollSize = window.innerHeight * apiServices.page - 200;
+    window.scrollTo({ top: scrollSize, behaviour: "smooth" }, 500);
     // window.scrollTo({
     // bottom: 100,
 
