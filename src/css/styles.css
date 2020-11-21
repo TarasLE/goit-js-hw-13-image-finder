@@ -24,7 +24,7 @@ body {
 }
 
 .photo-card {
-  display: flex;
+  display: block;
 }
 
 ul {
@@ -54,7 +54,7 @@ ul {
 }
 
 .stats {
-  display: block;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
