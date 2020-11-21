@@ -15,14 +15,17 @@ body {
 }
 
 .gallery {
+  padding: 0;
   width: 1200px;
   display: flex;
   flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .photo-card {
   display: flex;
-  width: 25%;
+  width: calc((100% -100px) / 4);
   margin: 20px;
 }
 
