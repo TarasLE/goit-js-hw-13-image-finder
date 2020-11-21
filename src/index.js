@@ -21,7 +21,7 @@ function onSearch(event) {
 }
  
 function onLoadMore() {
-    apiServices.fetchImages(searhQuery)
+    apiServices.fetchImages()
 }
 
 
