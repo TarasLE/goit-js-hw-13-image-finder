@@ -68,6 +68,7 @@ ul {
 }
 
 .load-more {
+  display: flex;
   margin-right: auto;
   margin-left: auto;
 }
