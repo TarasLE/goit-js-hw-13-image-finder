@@ -2,6 +2,7 @@ export default class ApiService {
     constructor() {
         this.searhQuery = '';
         this.page = 1;
+        scrollSize = window.innerHeight * apiServices.page -200;
     }
 
     fetchImages() {

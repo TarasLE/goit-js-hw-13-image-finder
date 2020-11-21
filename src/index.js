@@ -25,8 +25,11 @@ function onSearch(event) {
 function onLoadMore() {
     
     apiServices.fetchImages().then(appendImagesMarkUp)
-    const scrollSize = window.innerHeight * apiServices.page -200;
-    setTimeout(() => { window.scrollTo({ top: scrollSize, behaviour: "smooth" }) }, 500);
+        .then(setTimeout(() => {
+            window.scrollTo({ top: apiServices.scrollSize, behaviour: "smooth" })
+        }, 500))
+    // const scrollSize = window.innerHeight * apiServices.page -200;
+    
     // window.scrollTo({
     // bottom: 100,
 
