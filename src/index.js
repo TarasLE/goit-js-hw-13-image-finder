@@ -31,7 +31,7 @@ function onLoadMore() {
 // });
     // window.scrollTo({ top: 400 * apiServices.page, behaviour: "smooth" })
     const scrollSize = window.innerHeight * apiServices.page;
-    window.scrollTo(0, -600)
+    window.scrollTo(0, +600)
     // window.scrollTo({ top: scrollSize , behaviour: "smooth" })
     // console.log(636 * apiServices.page);
     // console.log(apiServices.page);
