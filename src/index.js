@@ -29,7 +29,8 @@ function onLoadMore() {
 
     // behavior: 'smooth'
 // });
-    window.scrollTo({ top: 400 * apiServices.page, behaviour: "smooth" })
+    // window.scrollTo({ top: 400 * apiServices.page, behaviour: "smooth" })
+    window.scrollTo({ top: 400 , behaviour: "smooth" })
     // console.log(636 * apiServices.page);
     // console.log(apiServices.page);
     
