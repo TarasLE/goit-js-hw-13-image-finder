@@ -43,7 +43,7 @@ ul {
 .stats-item {
   display: flex;
   padding: 0;
-  margin: 5px;
+  margin: 2px;
 }
 
 .card-container {
@@ -51,4 +51,10 @@ ul {
   margin: 0;
   width: calc((100% -100px) / 4);
   margin: 10px;
+}
+
+.stats {
+  display: block;
+  justify-content: center;
+  align-items: center;
 }
