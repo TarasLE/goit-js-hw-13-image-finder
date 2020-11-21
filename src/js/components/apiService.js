@@ -4,7 +4,7 @@ export default class ApiService {
         this.page = 1;
     }
 
-    fetchImages(searhQuery) {
+    fetchImages() {
         const option = {
         headers: {}
     }

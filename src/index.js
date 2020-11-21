@@ -17,7 +17,7 @@ function onSearch(event) {
     apiServices.query = event.currentTarget.elements.query.value;
     apiServices.resetPage();
 
-    apiServices.fetchImages(searhQuery);
+    apiServices.fetchImages();
 }
  
 function onLoadMore() {
