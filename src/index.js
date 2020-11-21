@@ -29,7 +29,7 @@ function onLoadMore() {
 
     // behavior: 'smooth'
 // });
-   window.scrollBy(0, window.innerHeight);
+  scrollTo({top: 0, behaviour: "smooth"})
 }
 
 function appendImagesMarkUp(images) {
