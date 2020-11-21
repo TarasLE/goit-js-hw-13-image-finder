@@ -25,8 +25,9 @@ body {
 
 .photo-card {
   display: flex;
+  flex-direction: row;
   width: calc((100% -100px) / 4);
-  margin: 20px;
+  margin: 0;
 }
 
 ul {
@@ -39,4 +40,11 @@ ul {
 
 .card-image {
   width: 100%;
+  height: auto;
+}
+
+.stats-item {
+  display: flex;
+  padding: 0;
+  margin: 5px;
 }
