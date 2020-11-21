@@ -13,7 +13,8 @@ export default class ApiService {
   
         return fetch(url, option).then(response => response.json()).then(data => {
             this.incrementPage();
-        return data.images});
+            return data.images;
+        });
     }
 
     incrementPage() {
