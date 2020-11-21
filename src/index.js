@@ -23,6 +23,7 @@ function onSearch(event) {
 }
  
 async function onLoadMore() {
+    const scrollSize = window.innerHeight * apiServices.page -200;
     console.log(`scrollSize до fetch ${scrollSize}`);
     console.log(`apiServices.page до fetch ${ apiServices.page }`);
     await apiServices.fetchImages().then(appendImagesMarkUp)
@@ -31,9 +32,9 @@ async function onLoadMore() {
         // .then(setTimeout(() => {
         //     window.scrollTo({ top: apiServices.page*window.innerHeight, behaviour: "smooth" })
         // }, 500))
-    const scrollSize = window.innerHeight * apiServices.page;
     
-    window.scrollTo({ top: scrollSize, behaviour: "smooth" }, 500);
+    
+    setTimeout(() => { window.scrollTo({ top: scrollSize, behaviour: "smooth" }) }, 500);
    
     // console.log(636 * apiServices.page);
     // console.log(apiServices.page);
