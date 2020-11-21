@@ -1,6 +1,7 @@
 import './css/styles.css';
 import ApiServices from './js/components/apiService'
 import { refs } from './js/components/refs'
+import imageCardTpl from './templates/imageCardTpl.hbs'
 
 
 
@@ -17,13 +18,16 @@ function onSearch(event) {
     apiServices.query = event.currentTarget.elements.query.value;
     apiServices.resetPage();
 
-    apiServices.fetchImages().then(hits => console.log(hits));
+    apiServices.fetchImages().then(appendImagesMarkUp);
 }
  
 function onLoadMore() {
-    apiServices.fetchImages().then(hits => console.log(hits));
+    apiServices.fetchImages().then(appendImagesMarkUp);
 }
 
+function appendImagesMarkUp(images) {
+    refs.imageContainer.insertAdjacentHTML('beforeend', imageCardTpl(images))
+}
 
 
       
