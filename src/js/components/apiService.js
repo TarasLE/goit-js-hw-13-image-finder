@@ -3,7 +3,7 @@ export default class ApiService {
     
     }
 
-    fetchImages() {
+    fetchImages(searhQuery) {
         const option = {
         headers: {}
     }

@@ -19,7 +19,7 @@ function onSearch(event) {
 
     const searhQuery = event.currentTarget.elements.query.value;
 
-    apiServices.fetchImages(searhQuery)
+    apiServices.fetchImages(searhQuery);
 }
  
 function onLoadMore() {
