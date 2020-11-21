@@ -30,9 +30,11 @@ function onLoadMore() {
     // behavior: 'smooth'
 // });
     // window.scrollTo({ top: 400 * apiServices.page, behaviour: "smooth" })
-    window.scrollTo({ top: 150 * apiServices.page , behaviour: "smooth" })
+    const scrollSize = window.innerHeight * apiServices.page;
+    window.scrollTo({ top: scrollSize , behaviour: "smooth" })
     // console.log(636 * apiServices.page);
     // console.log(apiServices.page);
+    console.log(window.innerHeight);
     
 }
 
