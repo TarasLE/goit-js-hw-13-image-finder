@@ -50,7 +50,7 @@ async function onSearch(event) {
                 type: 'info'
                 });
         } else
-            appendImagesMarkUp
+            appendImagesMarkUp()
         })
         scrollSize = refs.imageContainer.clientHeight;
         }
