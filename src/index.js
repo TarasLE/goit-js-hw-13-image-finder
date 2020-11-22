@@ -43,7 +43,15 @@ async function onSearch(event) {
     
     apiServices.resetPage();
 
-   await apiServices.fetchImages().then(appendImagesMarkUp)
+        await apiServices.fetchImages().then(data => {if (data.length == 0) {
+                 error({
+                delay: 1000,
+                text: 'Incorrect name. Please check and try again',
+                type: 'info'
+                });
+        } else
+            appendImagesMarkUp
+        })
         scrollSize = refs.imageContainer.clientHeight;
         }
 }
