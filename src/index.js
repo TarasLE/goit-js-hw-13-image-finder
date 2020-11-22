@@ -27,14 +27,14 @@ let searchQuery = '';
 async function onSearch(event) {
     event.preventDefault();
     clearImageContainer()
+     apiServices.query = event.currentTarget.elements.query.value.trim();
+    //  searchQuery = event.currentTarget.value.trim()
 
-     searchQuery = event.target.value.trim()
-
-    if (searchQuery.length === 0) {
+    if (apiServices.query.length === 0) {
         return
     } else{
         
-    apiServices.query = event.currentTarget.elements.query.value;
+    
     apiServices.resetPage();
 
    await apiServices.fetchImages().then(appendImagesMarkUp)
@@ -43,7 +43,7 @@ async function onSearch(event) {
 }
  
 async function onLoadMore() {
-    if (searchQuery.length === 0) {
+    if (apiServices.query.length === 0) {
         return
     } else {
     const scrollRevers = scrollSize * (apiServices.page - 1);
