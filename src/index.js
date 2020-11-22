@@ -2,6 +2,9 @@ import './css/styles.css';
 import ApiServices from './js/components/apiService'
 import { refs } from './js/components/refs'
 import imageCardTpl from './templates/imageCardTpl.hbs'
+import * as basicLightbox from 'basiclightbox'
+import '../node_modules/basiclightbox/dist/basicLightbox.min.css'
+
 
 
 

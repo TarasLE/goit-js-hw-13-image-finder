@@ -2,6 +2,11 @@
 <li class="card-container">
     <div class="photo-card">
         <img src="{{webformatURL}}" alt="" class="card-image" />
+        const instance = basicLightbox.create(`
+        <iframe src="{{largeImageURL}}" width="560" height="315" frameborder="0"></iframe>
+        `)
+
+        instance.show()
 
         <div class="stats">
             <p class="stats-item">
