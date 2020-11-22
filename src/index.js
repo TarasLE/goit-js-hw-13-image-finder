@@ -4,6 +4,8 @@ import { refs } from './js/components/refs'
 import imageCardTpl from './templates/imageCardTpl.hbs'
 import * as basicLightbox from 'basiclightbox'
 import '../node_modules/basiclightbox/dist/basicLightbox.min.css'
+import '@pnotify/core/dist/BrightTheme.css';
+import '@pnotify/core/dist/PNotify.css';
 
 
 
@@ -23,9 +25,9 @@ refs.loadMoreBtn.addEventListener('click', onLoadMore)
 refs.imageContainer.addEventListener('click', onPictureClick)
 let searchQuery = '';
 
-console.log(refs.imageContainer.innerHTML);
-console.log(refs.imageContainer.innerHTML.length);
-console.log(refs.imageContainer.innerHTML.length ==0);
+// console.log(refs.imageContainer.innerHTML);
+// console.log(refs.imageContainer.innerHTML.length);
+// console.log(refs.imageContainer.innerHTML.length ==0);
 
 
 async function onSearch(event) {
