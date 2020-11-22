@@ -20,6 +20,9 @@ const apiServices = new ApiServices();
 let scrollSize;
 refs.searchForm.addEventListener('submit', onSearch)
 refs.loadMoreBtn.addEventListener('click', onLoadMore)
+refs.imageContainer.addEventListener('click', onPictureClick)
+
+
 
 async function onSearch(event) {
     event.preventDefault();
@@ -51,4 +54,14 @@ const instance = basicLightbox.create(`
     <h1>Dynamic Content</h1>
     <p>You can set the content of the lightbox with JS.</p>
 `)
+
+function onPictureClick(event) {
+ 
+  if (event.target.nodeName !== "IMG") {
+    return
+  } else
+  
+  event.preventDefault();
+  instance.show()
+  }
       
