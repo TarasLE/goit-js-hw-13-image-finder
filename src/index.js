@@ -23,6 +23,8 @@ refs.loadMoreBtn.addEventListener('click', onLoadMore)
 refs.imageContainer.addEventListener('click', onPictureClick)
 let searchQuery = '';
 
+console.log(refs.imageContainer.innerHTML);
+console.log(refs.imageContainer.innerHTML.length);
 
 async function onSearch(event) {
     event.preventDefault();
@@ -54,6 +56,7 @@ async function onLoadMore() {
 }
 
 function appendImagesMarkUp(images) {
+
     refs.imageContainer.insertAdjacentHTML('beforeend', imageCardTpl(images))
 }
 
