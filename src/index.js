@@ -6,7 +6,7 @@ import * as basicLightbox from 'basiclightbox'
 import '../node_modules/basiclightbox/dist/basicLightbox.min.css'
 import '@pnotify/core/dist/BrightTheme.css';
 import '@pnotify/core/dist/PNotify.css';
-import { error } from './js/variables'
+import { error } from './js/components/variables'
 
 
 const apiServices = new ApiServices();
