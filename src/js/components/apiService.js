@@ -22,7 +22,8 @@ export default class ApiService {
             // } else 
                 this.incrementPage();
                 console.log(data.hits.length);
-                retu
+                return data.hits;
+                // }
         });
     }
 
