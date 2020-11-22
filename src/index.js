@@ -45,7 +45,9 @@ async function onSearch(event) {
     
     apiServices.resetPage();
 
-        await apiServices.fetchImages().then(data => {if (data.length == 0) {
+        await apiServices.fetchImages().then(data => {
+            console.log(data.length);
+            if (data.length == 0) {
                  error({
                 delay: 1000,
                 text: 'Incorrect name. Please check and try again',
