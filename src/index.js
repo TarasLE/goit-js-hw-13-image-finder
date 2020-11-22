@@ -11,12 +11,12 @@ import { error } from './js/components/variables'
 
 const apiServices = new ApiServices();
 
-// let searhQuery = '';
+let searchQuery = '';
 let scrollSize;
 refs.searchForm.addEventListener('submit', onSearch)
 refs.loadMoreBtn.addEventListener('click', onLoadMore)
 refs.imageContainer.addEventListener('click', onPictureClick)
-let searchQuery = '';
+
 
 
 async function onSearch(event) {
@@ -32,8 +32,7 @@ async function onSearch(event) {
     apiServices.resetPage();
 
         await apiServices.fetchImages().then(data => {
-            console.log(data.length);
-            if (data.length == 0) {
+           if (data.length == 0) {
                  error({
                 delay: 1000,
                 text: 'Incorrect name. Please check and try again',
