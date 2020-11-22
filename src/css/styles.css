@@ -54,12 +54,14 @@ ul {
 .card-image {
   width: 100%;
   height: 160px;
+  scale: 1;
   transition: transform var(--animation-duration) var(--timing-function);
 }
 
 .card-image__image:hover {
   transform: scale(1.03);
   cursor: pointers;
+  background-color: red;
 }
 
 .stats-item {
