@@ -25,6 +25,8 @@ let searchQuery = '';
 
 console.log(refs.imageContainer.innerHTML);
 console.log(refs.imageContainer.innerHTML.length);
+console.log(refs.imageContainer.innerHTML.length ==0);
+
 
 async function onSearch(event) {
     event.preventDefault();
@@ -32,7 +34,7 @@ async function onSearch(event) {
      apiServices.query = event.currentTarget.elements.query.value.trim();
     //  searchQuery = event.currentTarget.value.trim()
 
-    if (apiServices.query.length === 0) {
+    if (apiServices.query.length === 0 || refs.imageContaine.innerHTML ==0 ) {
         return
     } else{
         
