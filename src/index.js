@@ -47,7 +47,7 @@ async function onSearch(event) {
 }
  
 async function onLoadMore() {
-    if (apiServices.query.length === 0) {
+    if (apiServices.query.length === 0 || refs.imageContaine.innerHTML ==0 ) {
         return
     } else {
     const scrollRevers = scrollSize * (apiServices.page - 1);
