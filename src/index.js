@@ -19,6 +19,8 @@ refs.imageContainer.addEventListener('click', onPictureClick)
 
 
 
+
+
 async function onSearch(event) {
     event.preventDefault();
     clearImageContainer()
@@ -52,7 +54,7 @@ async function onLoadMore() {
     } else {
     const scrollRevers = scrollSize * (apiServices.page - 1);
     await apiServices.fetchImages().then(appendImagesMarkUp)
-         window.scrollTo({ top: scrollRevers, behaviour: "smooth" })
+         window.scrollTo({ top: scrollRevers, behavior: "smooth" })
          }
   
 }
