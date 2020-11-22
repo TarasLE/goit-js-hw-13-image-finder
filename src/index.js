@@ -6,17 +6,8 @@ import * as basicLightbox from 'basiclightbox'
 import '../node_modules/basiclightbox/dist/basicLightbox.min.css'
 import '@pnotify/core/dist/BrightTheme.css';
 import '@pnotify/core/dist/PNotify.css';
-// import "@pnotify/core/dist/PNotify.cstat"
-// import 'Qpnotify/core/dist/'
+import { error } from './js/variables'
 
-
-
-
-// const instance = basicLightbox.create(
-// 	document.querySelector('imageCardTpl')
-// )
-
-// instance.show()
 
 const apiServices = new ApiServices();
 
@@ -27,17 +18,12 @@ refs.loadMoreBtn.addEventListener('click', onLoadMore)
 refs.imageContainer.addEventListener('click', onPictureClick)
 let searchQuery = '';
 
-// console.log(refs.imageContainer.innerHTML);
-// console.log(refs.imageContainer.innerHTML.length);
-// console.log(refs.imageContainer.innerHTML.length ==0);
-
 
 async function onSearch(event) {
     event.preventDefault();
     clearImageContainer()
      apiServices.query = event.currentTarget.elements.query.value.trim();
-    //  searchQuery = event.currentTarget.value.trim()
-
+ 
     if (apiServices.query.length === 0) {
         return
     } else{
