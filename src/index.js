@@ -49,8 +49,9 @@ async function onSearch(event) {
                 text: 'Incorrect name. Please check and try again',
                 type: 'info'
                 });
-        } else
-            appendImagesMarkUp()
+        } else {
+            appendImagesMarkUp(data)
+            }
         })
         scrollSize = refs.imageContainer.clientHeight;
         }
