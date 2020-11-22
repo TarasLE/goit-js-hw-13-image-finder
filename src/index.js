@@ -21,7 +21,7 @@ let scrollSize;
 refs.searchForm.addEventListener('submit', onSearch)
 refs.loadMoreBtn.addEventListener('click', onLoadMore)
 refs.imageContainer.addEventListener('click', onPictureClick)
-
+let searchQuery = '';
 
 
 async function onSearch(event) {
@@ -43,7 +43,7 @@ async function onSearch(event) {
 }
  
 async function onLoadMore() {
-     if (searchQuery.length === 0) {
+    if (searchQuery.length === 0) {
         return
     } else {
     const scrollRevers = scrollSize * (apiServices.page - 1);
