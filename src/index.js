@@ -26,19 +26,30 @@ refs.imageContainer.addEventListener('click', onPictureClick)
 
 async function onSearch(event) {
     event.preventDefault();
-
     clearImageContainer()
+
+     searchQuery = event.target.value.trim()
+
+    if (searchQuery.length === 0) {
+        return
+    } else{
+        
     apiServices.query = event.currentTarget.elements.query.value;
     apiServices.resetPage();
 
    await apiServices.fetchImages().then(appendImagesMarkUp)
-   scrollSize = refs.imageContainer.clientHeight;
+        scrollSize = refs.imageContainer.clientHeight;
+        }
 }
  
 async function onLoadMore() {
+     if (searchQuery.length === 0) {
+        return
+    } else {
     const scrollRevers = scrollSize * (apiServices.page - 1);
     await apiServices.fetchImages().then(appendImagesMarkUp)
-    window.scrollTo({ top: scrollRevers, behaviour: "smooth" })
+         window.scrollTo({ top: scrollRevers, behaviour: "smooth" })
+         }
   
 }
 
