@@ -8,6 +8,12 @@ import '../node_modules/basiclightbox/dist/basicLightbox.min.css'
 
 
 
+const instance = basicLightbox.create(
+	document.querySelector('imageCardTpl')
+)
+
+instance.show()
+
 const apiServices = new ApiServices();
 
 // let searhQuery = '';
