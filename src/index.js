@@ -8,11 +8,11 @@ import '../node_modules/basiclightbox/dist/basicLightbox.min.css'
 
 
 
-const instance = basicLightbox.create(
-	document.querySelector('imageCardTpl')
-)
+// const instance = basicLightbox.create(
+// 	document.querySelector('imageCardTpl')
+// )
 
-instance.show()
+// instance.show()
 
 const apiServices = new ApiServices();
 
