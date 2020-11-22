@@ -61,7 +61,10 @@ function onPictureClick(event) {
     return
   } else
   
-  event.preventDefault();
+    event.preventDefault();
+    const instance = basicLightbox.create(`
+    <img src="${event.target.dataset.source}" width="800" height="600">
+`)
   instance.show()
   }
       
